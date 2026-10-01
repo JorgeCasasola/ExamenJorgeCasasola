@@ -1,0 +1,282 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Studios | Películas más exitosas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #090909;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 70px;
+            background: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #e62429;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 900;
+            background: #e62429;
+            padding: 5px 12px;
+            letter-spacing: -2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e62429;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background:
+                linear-gradient(90deg, #050505 20%, rgba(5,5,5,.75), rgba(5,5,5,.25)),
+                radial-gradient(circle at 80% 50%, #8b0000, #090909 55%);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 75px;
+            line-height: .95;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #e62429;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e62429;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #e62429;
+            transform: translateY(-3px);
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            text-transform: uppercase;
+        }
+
+        .section-title span {
+            color: #e62429;
+        }
+
+        .section-title p {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        /* ESTADÍSTICAS */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 70px;
+        }
+
+        .stat {
+            background: #151515;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #292929;
+        }
+
+        .stat h3 {
+            font-size: 35px;
+            color: #e62429;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            color: #bbb;
+        }
+
+        /* PELÍCULAS */
+        .movies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .movie {
+            background: #151515;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #292929;
+            transition: .3s;
+        }
+
+        .movie:hover {
+            transform: translateY(-8px);
+            border-color: #e62429;
+            box-shadow: 0 10px 35px rgba(230,36,41,.25);
+        }
+
+        .poster {
+            height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(135deg, #e62429, #290000);
+        }
+
+        .poster span {
+            font-size: 28px;
+            font-weight: 900;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .movie-info {
+            padding: 25px;
+        }
+
+        .movie-info h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .movie-info p {
+            color: #aaa;
+            margin: 8px 0;
+        }
+
+        .money {
+            color: #5ee35e !important;
+            font-weight: bold;
+        }
+
+        /* TABLA */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #151515;
+        }
+
+        th {
+            background: #e62429;
+            padding: 18px;
+            text-align: left;
+        }
+
+        td {
+            padding: 18px;
+            border-bottom: 1px solid #292929;
+        }
+
+        tr:hover {
+            background: #202020;
+        }
+
+        /* GRÁFICO */
+        .chart {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .bar {
+            margin: 25px 0;
+        }
+
+        .bar-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .bar-bg {
+            height: 18px;
+            background: #292929;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #e62429;
+            border-radius: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid #e62429;
+        }
+
+        footer h2 {
+            color: #e62429;
+```
