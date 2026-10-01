@@ -1418,6 +1418,871 @@ footer p {
 
     .imagen-pelicula {
         height: 500px;
+```css
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.header {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background-color: #050505;
+
+    border-bottom: 2px solid #e62429;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+
+/* LINKS */
+
+.header nav {
+    display: flex;
+    gap: 35px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #e62429;
+}
+
+
+/* =========================================
+   PORTADA PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            #050505 10%,
+            rgba(5, 5, 5, 0.90) 40%,
+            rgba(5, 5, 5, 0.35) 100%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            #a50000,
+            #080808 60%
+        );
+}
+
+
+/* EFECTO ROJO */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: 5%;
+
+    border-radius: 50%;
+
+    background: rgba(230, 36, 41, 0.15);
+
+    filter: blur(90px);
+}
+
+
+/* CONTENIDO */
+
+.hero-contenido {
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* TEXTO PEQUEÑO */
+
+.subtitulo {
+    color: #e62429;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    text-transform: uppercase;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #e62429;
+
+    display: block;
+}
+
+
+/* DESCRIPCIÓN */
+
+.descripcion {
+    max-width: 600px;
+
+    color: #cccccc;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.boton {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    background-color: #e62429;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: white;
+
+    color: #e62429;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+section {
+    padding: 100px 8%;
+}
+
+
+/* TÍTULOS */
+
+.titulo-seccion {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.titulo-seccion > p {
+    color: #e62429;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.titulo-seccion h2 {
+    font-size: clamp(32px, 5vw, 50px);
+
+    text-transform: uppercase;
+
+    line-height: 1.1;
+}
+
+.titulo-seccion span {
+    color: #e62429;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.introduccion {
+    background-color: #0d0d0d;
+
+    text-align: center;
+}
+
+.texto-intro {
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   ESTADÍSTICAS
+========================================= */
+
+.estadisticas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    background-color: #0d0d0d;
+
+    padding-top: 0;
+}
+
+
+/* TARJETA */
+
+.estadistica {
+    background-color: #151515;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.estadistica:hover {
+    border-color: #e62429;
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 30px rgba(230, 36, 41, 0.15);
+}
+
+
+/* NÚMERO */
+
+.estadistica h3 {
+    color: #e62429;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+/* TEXTO */
+
+.estadistica p {
+    color: #aaa;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   PELÍCULAS
+========================================= */
+
+.peliculas {
+    background-color: #080808;
+}
+
+
+/* GRID */
+
+.grid-peliculas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* TARJETA DE PELÍCULA */
+
+.pelicula {
+    background-color: #141414;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    transition: 0.35s;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.pelicula:hover {
+    transform: translateY(-10px);
+
+    border-color: #e62429;
+
+    box-shadow:
+        0 20px 50px rgba(230, 36, 41, 0.20);
+}
+
+
+/* =========================================
+   IMAGEN DE LA PELÍCULA
+========================================= */
+
+.imagen-pelicula {
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #222;
+}
+
+
+.imagen-pelicula img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+
+/* ZOOM */
+
+.pelicula:hover .imagen-pelicula img {
+    transform: scale(1.07);
+}
+
+
+/* OSCURECER PARTE INFERIOR */
+
+.imagen-pelicula::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 50%,
+            rgba(0, 0, 0, 0.85)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   NÚMERO DEL RANKING
+========================================= */
+
+.numero {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 5;
+
+    background-color: #e62429;
+
+    padding: 9px 14px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   INFORMACIÓN DE PELÍCULA
+========================================= */
+
+.informacion {
+    padding: 25px;
+}
+
+
+.informacion h3 {
+    font-size: 22px;
+
+    margin-bottom: 7px;
+
+    line-height: 1.3;
+}
+
+
+.año {
+    color: #888;
+
+    margin-bottom: 20px;
+}
+
+
+/* DATOS */
+
+.datos-pelicula {
+    border-top: 1px solid #292929;
+
+    padding-top: 15px;
+}
+
+
+.datos-pelicula p {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    margin: 9px 0;
+}
+
+
+.datos-pelicula strong {
+    color: white;
+}
+
+
+/* =========================================
+   TABLA DE PRESUPUESTOS
+========================================= */
+
+.presupuestos {
+    background-color: #101010;
+}
+
+
+.tabla-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+    background-color: #151515;
+}
+
+
+/* ENCABEZADO */
+
+th {
+    background-color: #e62429;
+
+    color: white;
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+
+
+/* CELDAS */
+
+td {
+    padding: 20px 18px;
+
+    border-bottom: 1px solid #292929;
+
+    color: #ccc;
+}
+
+
+/* HOVER */
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #202020;
+}
+
+
+/* RECAUDACIÓN */
+
+td:last-child {
+    color: #55dc72;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   GRÁFICO
+========================================= */
+
+.comparacion {
+    background-color: #080808;
+}
+
+
+.grafico {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.barra {
+    margin-bottom: 30px;
+}
+
+
+/* NOMBRE + DINERO */
+
+.barra-texto {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #ddd;
+
+    font-size: 15px;
+}
+
+
+.barra-texto b {
+    color: #e62429;
+}
+
+
+/* FONDO */
+
+.barra-fondo {
+    width: 100%;
+
+    height: 15px;
+
+    background-color: #252525;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+/* BARRA ROJA */
+
+.barra-relleno {
+    height: 100%;
+
+    background-color: #e62429;
+
+    border-radius: 20px;
+
+    transition: width 1s ease;
+}
+
+
+/* PORCENTAJES */
+
+.endgame {
+    width: 100%;
+}
+
+.infinity {
+    width: 74%;
+}
+
+.spiderman {
+    width: 69%;
+}
+
+.avengers {
+    width: 54%;
+}
+
+.black {
+    width: 48%;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background-color: #050505;
+
+    border-top: 2px solid #e62429;
+}
+
+
+/* LOGO FOOTER */
+
+.footer-logo {
+    display: inline-block;
+
+    background-color: #e62429;
+
+    color: white;
+
+    padding: 7px 15px;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+
+footer p {
+    color: #777;
+
+    margin: 7px;
+}
+
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero-contenido {
+    animation: aparecer 1s ease;
+}
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .header nav {
+        gap: 18px;
+    }
+
+
+    .grid-peliculas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 65px;
+
+        padding: 0 5%;
+    }
+
+
+    .logo img {
+        width: 100px;
+    }
+
+
+    .header nav {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 6%;
+    }
+
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+
+    section {
+        padding: 70px 6%;
+    }
+
+
+    .grid-peliculas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .imagen-pelicula {
+        height: 500px;
+    }
+
+
+    .estadisticas {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+
+    .barra-texto {
+        font-size: 13px;
+    }
+
+
+    .tabla-container {
+        margin-top: 20px;
+    }
+
+
 
 
