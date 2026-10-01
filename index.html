@@ -1,136 +1,834 @@
-```css
-/* =====================================
-   CONFIGURACIÓN GENERAL
-===================================== */
+```html
+<!DOCTYPE html>
+<html lang="es">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Marvel Studios | Películas más exitosas</title>
 
-body {
-    background: #080808;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <!-- Conexión con el archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
 
+<body>
 
-/* =====================================
-   HEADER
-===================================== */
+    <!-- =========================
+         MENÚ PRINCIPAL
+    ========================== -->
 
-.header {
-    width: 100%;
-    height: 75px;
+    <header class="header">
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        <div class="logo">
+            <img src="imagenes/logo-marvel.png" alt="Marvel Studios">
+        </div>
 
-    padding: 0 8%;
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#taquilleras">Películas</a>
+            <a href="#presupuestos">Presupuestos</a>
+            <a href="#datos">Comparación</a>
+        </nav>
 
-    background: #050505;
-
-    border-bottom: 2px solid #e62429;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 1000;
-}
+    </header>
 
 
-.logo img {
-    width: 120px;
-    display: block;
-}
+    <!-- =========================
+         PORTADA
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-contenido">
+
+            <p class="subtitulo">
+                MARVEL STUDIOS PRESENTA
+            </p>
+
+            <h1>
+                EL UNIVERSO
+                <span>MARVEL</span>
+            </h1>
+
+            <p class="descripcion">
+                Descubre las películas más exitosas del Universo
+                Cinematográfico de Marvel, sus grandes recaudaciones
+                y las producciones que tuvieron los presupuestos más altos.
+            </p>
+
+            <a href="#taquilleras" class="boton">
+                EXPLORAR PELÍCULAS
+            </a>
+
+        </div>
+
+    </section>
 
 
-.header nav {
-    display: flex;
-    gap: 35px;
-}
+    <!-- =========================
+         INTRODUCCIÓN
+    ========================== -->
+
+    <section class="introduccion">
+
+        <div class="titulo-seccion">
+
+            <p>MARVEL CINEMATIC UNIVERSE</p>
+
+            <h2>
+                Una historia que hizo
+                <span>historia</span>
+            </h2>
+
+        </div>
+
+        <p class="texto-intro">
+
+            El Universo Cinematográfico de Marvel es una de las
+            franquicias cinematográficas más conocidas del mundo.
+            A través de los años, sus películas han presentado
+            personajes como Iron Man, Capitán América, Thor,
+            Spider-Man, Black Panther y muchos más.
+
+        </p>
+
+    </section>
 
 
-.header nav a {
-    color: white;
+    <!-- =========================
+         ESTADÍSTICAS
+    ========================== -->
 
-    text-decoration: none;
+    <section class="estadisticas">
 
-    font-size: 15px;
-    font-weight: bold;
+        <div class="estadistica">
 
-    transition: .3s;
-}
+            <h3>$2.79B</h3>
 
+            <p>
+                Recaudación mundial aproximada de
+                Avengers: Endgame
+            </p>
 
-.header nav a:hover {
-    color: #e62429;
-}
-
-
-/* =====================================
-   HERO
-===================================== */
-
-.hero {
-    min-height: 700px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 80px 8%;
-
-    background:
-        linear-gradient(
-            90deg,
-            #050505 15%,
-            rgba(5, 5, 5, .85) 45%,
-            rgba(5, 5, 5, .2)
-        ),
-        radial-gradient(
-            circle at 80% 50%,
-            #8d0000,
-            #080808 60%
-        );
-
-    position: relative;
-}
+        </div>
 
 
-.hero::after {
-    content: "";
+        <div class="estadistica">
 
-    position: absolute;
+            <h3>$400M</h3>
 
-    width: 500px;
-    height: 500px;
+            <p>
+                Presupuesto reportado para
+                Avengers: Endgame
+            </p>
 
-    right: 5%;
-
-    border-radius: 50%;
-
-    background: rgba(230, 36, 41, .12);
-
-    filter: blur(80px);
-}
+        </div>
 
 
-.hero-contenido {
-    max-width: 700px;
+        <div class="estadistica">
 
-    position: relative;
+            <h3>2019</h3>
 
-    z-index: 2;
-}
+            <p>
+                Año en que se estrenó
+                Avengers: Endgame
+            </p>
+
+        </div>
+
+    </section>
 
 
-.subtitulo {
+    <!-- =========================
+         PELÍCULAS MÁS TAQUILLERAS
+    ========================== -->
+
+    <section class="peliculas" id="taquilleras">
+
+        <div class="titulo-seccion">
+
+            <p>BOX OFFICE</p>
+
+            <h2>
+                Películas más
+                <span>taquilleras</span>
+            </h2>
+
+        </div>
+
+
+        <div class="grid-peliculas">
+
+
+            <!-- =====================
+                 PELÍCULA 1
+            ====================== -->
+
+            <article class="pelicula">
+
+                <div class="imagen-pelicula">
+
+                    <img
+                        src="imagenes/endgame.jpg"
+                        alt="Póster de Avengers Endgame"
+                    >
+
+                    <div class="numero">
+                        #1
+                    </div>
+
+                </div>
+
+
+                <div class="informacion">
+
+                    <h3>
+                        Avengers: Endgame
+                    </h3>
+
+                    <p class="año">
+                        2019
+                    </p>
+
+                    <div class="datos-pelicula">
+
+                        <p>
+                            <strong>Taquilla</strong>
+                            <span>$2.79 B</span>
+                        </p>
+
+                        <p>
+                            <strong>Presupuesto</strong>
+                            <span>$356–400 M</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 PELÍCULA 2
+            ====================== -->
+
+            <article class="pelicula">
+
+                <div class="imagen-pelicula">
+
+                    <img
+                        src="imagenes/infinity-war.jpg"
+                        alt="Póster de Avengers Infinity War"
+                    >
+
+                    <div class="numero">
+                        #2
+                    </div>
+
+                </div>
+
+
+                <div class="informacion">
+
+                    <h3>
+                        Avengers: Infinity War
+                    </h3>
+
+                    <p class="año">
+                        2018
+                    </p>
+
+                    <div class="datos-pelicula">
+
+                        <p>
+                            <strong>Taquilla</strong>
+                            <span>$2.05 B</span>
+                        </p>
+
+                        <p>
+                            <strong>Presupuesto</strong>
+                            <span>$300–350 M</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 PELÍCULA 3
+            ====================== -->
+
+            <article class="pelicula">
+
+                <div class="imagen-pelicula">
+
+                    <img
+                        src="imagenes/no-way-home.jpg"
+                        alt="Póster de Spider-Man No Way Home"
+                    >
+
+                    <div class="numero">
+                        #3
+                    </div>
+
+                </div>
+
+
+                <div class="informacion">
+
+                    <h3>
+                        Spider-Man: No Way Home
+                    </h3>
+
+                    <p class="año">
+                        2021
+                    </p>
+
+                    <div class="datos-pelicula">
+
+                        <p>
+                            <strong>Taquilla</strong>
+                            <span>$1.92 B</span>
+                        </p>
+
+                        <p>
+                            <strong>Presupuesto</strong>
+                            <span>$200 M</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 PELÍCULA 4
+            ====================== -->
+
+            <article class="pelicula">
+
+                <div class="imagen-pelicula">
+
+                    <img
+                        src="imagenes/avengers.jpg"
+                        alt="Póster de The Avengers"
+                    >
+
+                    <div class="numero">
+                        #4
+                    </div>
+
+                </div>
+
+
+                <div class="informacion">
+
+                    <h3>
+                        The Avengers
+                    </h3>
+
+                    <p class="año">
+                        2012
+                    </p>
+
+                    <div class="datos-pelicula">
+
+                        <p>
+                            <strong>Taquilla</strong>
+                            <span>$1.52 B</span>
+                        </p>
+
+                        <p>
+                            <strong>Presupuesto</strong>
+                            <span>$220 M</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 PELÍCULA 5
+            ====================== -->
+
+            <article class="pelicula">
+
+                <div class="imagen-pelicula">
+
+                    <img
+                        src="imagenes/black-panther.jpg"
+                        alt="Póster de Black Panther"
+                    >
+
+                    <div class="numero">
+                        #5
+                    </div>
+
+                </div>
+
+
+                <div class="informacion">
+
+                    <h3>
+                        Black Panther
+                    </h3>
+
+                    <p class="año">
+                        2018
+                    </p>
+
+                    <div class="datos-pelicula">
+
+                        <p>
+                            <strong>Taquilla</strong>
+                            <span>$1.35 B</span>
+                        </p>
+
+                        <p>
+                            <strong>Presupuesto</strong>
+                            <span>$200 M</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================
+                 PELÍCULA 6
+            ====================== -->
+
+            <article class="pelicula">
+
+                <div class="imagen-pelicula">
+
+                    <img
+                        src="imagenes/ultron.jpg"
+                        alt="Póster de Avengers Age of Ultron"
+                    >
+
+                    <div class="numero">
+                        #6
+                    </div>
+
+                </div>
+
+
+                <div class="informacion">
+
+                    <h3>
+                        Avengers: Age of Ultron
+                    </h3>
+
+                    <p class="año">
+                        2015
+                    </p>
+
+                    <div class="datos-pelicula">
+
+                        <p>
+                            <strong>Taquilla</strong>
+                            <span>$1.40 B</span>
+                        </p>
+
+                        <p>
+                            <strong>Presupuesto</strong>
+                            <span>$365 M</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAYORES PRESUPUESTOS
+    ========================== -->
+
+    <section class="presupuestos" id="presupuestos">
+
+        <div class="titulo-seccion">
+
+            <p>PRODUCCIÓN</p>
+
+            <h2>
+                Mayores
+                <span>presupuestos</span>
+            </h2>
+
+        </div>
+
+
+        <div class="tabla-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Película
+                        </th>
+
+                        <th>
+                            Año
+                        </th>
+
+                        <th>
+                            Presupuesto
+                        </th>
+
+                        <th>
+                            Recaudación
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Avengers: Endgame
+                        </td>
+
+                        <td>
+                            2019
+                        </td>
+
+                        <td>
+                            $356–400 M
+                        </td>
+
+                        <td>
+                            $2.79 B
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Avengers: Age of Ultron
+                        </td>
+
+                        <td>
+                            2015
+                        </td>
+
+                        <td>
+                            $365 M
+                        </td>
+
+                        <td>
+                            $1.40 B
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Avengers: Infinity War
+                        </td>
+
+                        <td>
+                            2018
+                        </td>
+
+                        <td>
+                            $300–350 M
+                        </td>
+
+                        <td>
+                            $2.05 B
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Captain America: Civil War
+                        </td>
+
+                        <td>
+                            2016
+                        </td>
+
+                        <td>
+                            $250 M
+                        </td>
+
+                        <td>
+                            $1.15 B
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Doctor Strange: Multiverse of Madness
+                        </td>
+
+                        <td>
+                            2022
+                        </td>
+
+                        <td>
+                            $200 M
+                        </td>
+
+                        <td>
+                            $955 M
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMPARACIÓN
+    ========================== -->
+
+    <section class="comparacion" id="datos">
+
+        <div class="titulo-seccion">
+
+            <p>BOX OFFICE</p>
+
+            <h2>
+                Comparación de
+                <span>taquilla</span>
+            </h2>
+
+        </div>
+
+
+        <div class="grafico">
+
+
+            <!-- ENDGAME -->
+
+            <div class="barra">
+
+                <div class="barra-texto">
+
+                    <span>
+                        Avengers: Endgame
+                    </span>
+
+                    <b>
+                        $2.79 B
+                    </b>
+
+                </div>
+
+                <div class="barra-fondo">
+
+                    <div class="barra-relleno endgame"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFINITY WAR -->
+
+            <div class="barra">
+
+                <div class="barra-texto">
+
+                    <span>
+                        Avengers: Infinity War
+                    </span>
+
+                    <b>
+                        $2.05 B
+                    </b>
+
+                </div>
+
+                <div class="barra-fondo">
+
+                    <div class="barra-relleno infinity"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NO WAY HOME -->
+
+            <div class="barra">
+
+                <div class="barra-texto">
+
+                    <span>
+                        Spider-Man: No Way Home
+                    </span>
+
+                    <b>
+                        $1.92 B
+                    </b>
+
+                </div>
+
+                <div class="barra-fondo">
+
+                    <div class="barra-relleno spiderman"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- THE AVENGERS -->
+
+            <div class="barra">
+
+                <div class="barra-texto">
+
+                    <span>
+                        The Avengers
+                    </span>
+
+                    <b>
+                        $1.52 B
+                    </b>
+
+                </div>
+
+                <div class="barra-fondo">
+
+                    <div class="barra-relleno avengers"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BLACK PANTHER -->
+
+            <div class="barra">
+
+                <div class="barra-texto">
+
+                    <span>
+                        Black Panther
+                    </span>
+
+                    <b>
+                        $1.35 B
+                    </b>
+
+                </div>
+
+                <div class="barra-fondo">
+
+                    <div class="barra-relleno black"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INFORMACIÓN FINAL
+    ========================== -->
+
+    <section class="introduccion">
+
+        <div class="titulo-seccion">
+
+            <p>MARVEL STUDIOS</p>
+
+            <h2>
+                El poder de los
+                <span>superhéroes</span>
+            </h2>
+
+        </div>
+
+        <p class="texto-intro">
+
+            Desde Iron Man hasta los Avengers, Marvel ha construido
+            un universo cinematográfico conectado que reúne a
+            diferentes personajes e historias.
+
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MARVEL
+        </div>
+
+        <p>
+            Página web educativa sobre Marvel Studios.
+        </p>
+
+        <p>
+            Proyecto escolar
+        </p>
+
+        <p class="copyright">
+            © 2026 Marvel Fan Page
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
+
     color: #e62429;
 
     font-weight: bold;
