@@ -1,281 +1,725 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel Studios | Películas más exitosas</title>
+```css
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            background: #090909;
-            color: white;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        /* NAVBAR */
-        nav {
-            height: 70px;
-            background: #050505;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 7%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #e62429;
-        }
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: 900;
-            background: #e62429;
-            padding: 5px 12px;
-            letter-spacing: -2px;
-        }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
+/* =====================================
+   HEADER
+===================================== */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.header {
+    width: 100%;
+    height: 75px;
 
-        nav a:hover {
-            color: #e62429;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        /* HERO */
-        .hero {
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            padding: 80px 8%;
-            background:
-                linear-gradient(90deg, #050505 20%, rgba(5,5,5,.75), rgba(5,5,5,.25)),
-                radial-gradient(circle at 80% 50%, #8b0000, #090909 55%);
-        }
+    padding: 0 8%;
 
-        .hero-content {
-            max-width: 700px;
-        }
+    background: #050505;
 
-        .hero h1 {
-            font-size: 75px;
-            line-height: .95;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-        }
+    border-bottom: 2px solid #e62429;
 
-        .hero h1 span {
-            color: #e62429;
-        }
+    position: sticky;
+    top: 0;
 
-        .hero p {
-            font-size: 20px;
-            line-height: 1.6;
-            color: #ddd;
-            margin-bottom: 35px;
-        }
+    z-index: 1000;
+}
 
-        .btn {
-            display: inline-block;
-            background: #e62429;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: .3s;
-        }
 
-        .btn:hover {
-            background: white;
-            color: #e62429;
-            transform: translateY(-3px);
-        }
+.logo img {
+    width: 120px;
+    display: block;
+}
 
-        /* SECCIONES */
-        section {
-            padding: 80px 8%;
-        }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.header nav {
+    display: flex;
+    gap: 35px;
+}
 
-        .section-title h2 {
-            font-size: 42px;
-            text-transform: uppercase;
-        }
 
-        .section-title span {
-            color: #e62429;
-        }
+.header nav a {
+    color: white;
 
-        .section-title p {
-            color: #aaa;
-            margin-top: 10px;
-        }
+    text-decoration: none;
 
-        /* ESTADÍSTICAS */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-bottom: 70px;
-        }
+    font-size: 15px;
+    font-weight: bold;
 
-        .stat {
-            background: #151515;
-            padding: 30px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid #292929;
-        }
+    transition: .3s;
+}
 
-        .stat h3 {
-            font-size: 35px;
-            color: #e62429;
-            margin-bottom: 10px;
-        }
 
-        .stat p {
-            color: #bbb;
-        }
+.header nav a:hover {
+    color: #e62429;
+}
 
-        /* PELÍCULAS */
-        .movies {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
 
-        .movie {
-            background: #151515;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #292929;
-            transition: .3s;
-        }
+/* =====================================
+   HERO
+===================================== */
 
-        .movie:hover {
-            transform: translateY(-8px);
-            border-color: #e62429;
-            box-shadow: 0 10px 35px rgba(230,36,41,.25);
-        }
+.hero {
+    min-height: 700px;
 
-        .poster {
-            height: 270px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background:
-                linear-gradient(135deg, #e62429, #290000);
-        }
+    display: flex;
+    align-items: center;
 
-        .poster span {
-            font-size: 28px;
-            font-weight: 900;
-            text-align: center;
-            padding: 20px;
-        }
+    padding: 80px 8%;
 
-        .movie-info {
-            padding: 25px;
-        }
+    background:
+        linear-gradient(
+            90deg,
+            #050505 15%,
+            rgba(5, 5, 5, .85) 45%,
+            rgba(5, 5, 5, .2)
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            #8d0000,
+            #080808 60%
+        );
 
-        .movie-info h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
+    position: relative;
+}
 
-        .movie-info p {
-            color: #aaa;
-            margin: 8px 0;
-        }
 
-        .money {
-            color: #5ee35e !important;
-            font-weight: bold;
-        }
+.hero::after {
+    content: "";
 
-        /* TABLA */
-        .table-container {
-            overflow-x: auto;
-        }
+    position: absolute;
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #151515;
-        }
+    width: 500px;
+    height: 500px;
 
-        th {
-            background: #e62429;
-            padding: 18px;
-            text-align: left;
-        }
+    right: 5%;
 
-        td {
-            padding: 18px;
-            border-bottom: 1px solid #292929;
-        }
+    border-radius: 50%;
 
-        tr:hover {
-            background: #202020;
-        }
+    background: rgba(230, 36, 41, .12);
 
-        /* GRÁFICO */
-        .chart {
-            max-width: 1000px;
-            margin: auto;
-        }
+    filter: blur(80px);
+}
 
-        .bar {
-            margin: 25px 0;
-        }
 
-        .bar-title {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
+.hero-contenido {
+    max-width: 700px;
 
-        .bar-bg {
-            height: 18px;
-            background: #292929;
-            border-radius: 20px;
-            overflow: hidden;
-        }
+    position: relative;
 
-        .bar-fill {
-            height: 100%;
-            background: #e62429;
-            border-radius: 20px;
-        }
+    z-index: 2;
+}
 
-        /* FOOTER */
-        footer {
-            background: #050505;
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 2px solid #e62429;
-        }
 
-        footer h2 {
-            color: #e62429;
-```
+.subtitulo {
+    color: #e62429;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: .9;
+
+    text-transform: uppercase;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+    color: #e62429;
+
+    display: block;
+}
+
+
+.descripcion {
+    max-width: 600px;
+
+    color: #cccccc;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================
+   BOTÓN
+===================================== */
+
+.boton {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    background: #e62429;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: .3s;
+}
+
+
+.boton:hover {
+    background: white;
+
+    color: #e62429;
+
+    transform: translateY(-4px);
+}
+
+
+/* =====================================
+   SECCIONES
+===================================== */
+
+section {
+    padding: 100px 8%;
+}
+
+
+.titulo-seccion {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+
+.titulo-seccion > p {
+    color: #e62429;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+.titulo-seccion h2 {
+    font-size: clamp(32px, 5vw, 50px);
+
+    text-transform: uppercase;
+}
+
+
+.titulo-seccion span {
+    color: #e62429;
+}
+
+
+/* =====================================
+   INTRODUCCIÓN
+===================================== */
+
+.introduccion {
+    background: #0d0d0d;
+
+    text-align: center;
+}
+
+
+.texto-intro {
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   ESTADÍSTICAS
+===================================== */
+
+.estadisticas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    background: #0d0d0d;
+
+    padding-top: 0;
+}
+
+
+.estadistica {
+    background: #151515;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    transition: .3s;
+}
+
+
+.estadistica:hover {
+    border-color: #e62429;
+
+    transform: translateY(-5px);
+}
+
+
+.estadistica h3 {
+    color: #e62429;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.estadistica p {
+    color: #aaa;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   PELÍCULAS
+===================================== */
+
+.peliculas {
+    background: #080808;
+}
+
+
+.grid-peliculas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.pelicula {
+    background: #141414;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    transition: .35s;
+}
+
+
+.pelicula:hover {
+    transform: translateY(-10px);
+
+    border-color: #e62429;
+
+    box-shadow: 0 20px 50px rgba(230, 36, 41, .2);
+}
+
+
+.imagen-pelicula {
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #222;
+}
+
+
+.imagen-pelicula img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .5s;
+}
+
+
+.pelicula:hover .imagen-pelicula img {
+    transform: scale(1.07);
+}
+
+
+.imagen-pelicula::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 55%,
+            rgba(0, 0, 0, .8)
+        );
+}
+
+
+.numero {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    background: #e62429;
+
+    padding: 9px 14px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+}
+
+
+.informacion {
+    padding: 25px;
+}
+
+
+.informacion h3 {
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+
+.año {
+    color: #888;
+
+    margin-bottom: 20px;
+}
+
+
+.datos-pelicula {
+    border-top: 1px solid #292929;
+
+    padding-top: 15px;
+}
+
+
+.datos-pelicula p {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    margin: 8px 0;
+}
+
+
+.datos-pelicula strong {
+    color: white;
+}
+
+
+/* =====================================
+   TABLA
+===================================== */
+
+.presupuestos {
+    background: #101010;
+}
+
+
+.tabla-container {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+    background: #151515;
+}
+
+
+th {
+    background: #e62429;
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+
+
+td {
+    padding: 20px 18px;
+
+    border-bottom: 1px solid #292929;
+
+    color: #ccc;
+}
+
+
+tbody tr {
+    transition: .2s;
+}
+
+
+tbody tr:hover {
+    background: #202020;
+}
+
+
+td:last-child {
+    color: #55dc72;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   GRÁFICO
+===================================== */
+
+.comparacion {
+    background: #080808;
+}
+
+
+.grafico {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.barra {
+    margin-bottom: 30px;
+}
+
+
+.barra-texto {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #ddd;
+}
+
+
+.barra-texto b {
+    color: #e62429;
+}
+
+
+.barra-fondo {
+    width: 100%;
+
+    height: 15px;
+
+    background: #252525;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.barra-relleno {
+    height: 100%;
+
+    background: #e62429;
+
+    border-radius: 20px;
+}
+
+
+.endgame {
+    width: 100%;
+}
+
+
+.infinity {
+    width: 74%;
+}
+
+
+.spiderman {
+    width: 69%;
+}
+
+
+.avengers {
+    width: 54%;
+}
+
+
+.black {
+    width: 48%;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 2px solid #e62429;
+}
+
+
+.footer-logo {
+    display: inline-block;
+
+    background: #e62429;
+
+    padding: 7px 15px;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+
+footer p {
+    color: #777;
+
+    margin: 7px;
+}
+
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .header nav {
+        gap: 15px;
+    }
+
+
+    .grid-peliculas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 65px;
+    }
+
+
+    .header nav {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 6%;
+    }
+
+
+    section {
+        padding: 70px 6%;
+    }
+
+
+    .grid-peliculas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .imagen-pelicula {
+        height: 500px;
+    }
+
+
