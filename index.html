@@ -6,2283 +6,329 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Marvel Studios | Películas más exitosas</title>
+    <title>Marvel Studios</title>
 
-    <!-- Conexión con el archivo CSS -->
-    <link rel="stylesheet" href="estilos.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        /* MENÚ */
+
+        header {
+            background-color: #080808;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #e62429;
+            margin: 0 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #e62429;
+        }
+
+        /* INICIO */
+
+        .inicio {
+            text-align: center;
+            padding: 100px 20px;
+
+            background-image:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+            url("https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?w=1600");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .inicio h2 {
+            font-size: 55px;
+        }
+
+        .inicio span {
+            color: #e62429;
+        }
+
+        .inicio p {
+            font-size: 20px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #e62429;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* SECCIONES */
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .titulo span {
+            color: #e62429;
+        }
+
+        /* PELÍCULAS */
+
+        .peliculas {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .pelicula {
+            background-color: #1d1d1d;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pelicula:hover {
+            transform: scale(1.03);
+        }
+
+        .pelicula img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        .pelicula div {
+            padding: 20px;
+        }
+
+        .pelicula h3 {
+            font-size: 23px;
+        }
+
+        .pelicula p {
+            color: #bbb;
+            line-height: 1.5;
+        }
+
+        /* INFORMACIÓN */
+
+        .informacion {
+            background-color: #181818;
+            text-align: center;
+        }
+
+        .informacion p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #080808;
+            text-align: center;
+            padding: 25px;
+            color: #888;
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         MENÚ PRINCIPAL
-    ========================== -->
+    <!-- MENÚ -->
 
-    <header class="header">
+    <header>
 
-        <div class="logo">
-            <img src="imagenes/logo-marvel.png" alt="Marvel Studios">
-        </div>
+        <h1>MARVEL STUDIOS</h1>
 
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#taquilleras">Películas</a>
-            <a href="#presupuestos">Presupuestos</a>
-            <a href="#datos">Comparación</a>
+            <a href="#peliculas">Películas</a>
+            <a href="#personajes">Personajes</a>
+            <a href="#informacion">Información</a>
         </nav>
 
     </header>
 
 
-    <!-- =========================
-         PORTADA
-    ========================== -->
+    <!-- INICIO -->
 
-    <section class="hero" id="inicio">
+    <section class="inicio" id="inicio">
 
-        <div class="hero-contenido">
+        <h2>EL UNIVERSO DE <span>MARVEL</span></h2>
 
-            <p class="subtitulo">
-                MARVEL STUDIOS PRESENTA
-            </p>
+        <p>
+            Descubre algunas de las películas más famosas
+            del Universo Cinematográfico de Marvel.
+        </p>
 
-            <h1>
-                EL UNIVERSO
-                <span>MARVEL</span>
-            </h1>
+        <a href="#peliculas" class="boton">
+            Ver películas
+        </a>
 
-            <p class="descripcion">
-                Descubre las películas más exitosas del Universo
-                Cinematográfico de Marvel, sus grandes recaudaciones
-                y las producciones que tuvieron los presupuestos más altos.
-            </p>
+    </section>
 
-            <a href="#taquilleras" class="boton">
-                EXPLORAR PELÍCULAS
-            </a>
+
+    <!-- PELÍCULAS -->
+
+    <section id="peliculas">
+
+        <h2 class="titulo">
+            Películas <span>Destacadas</span>
+        </h2>
+
+        <div class="peliculas">
+
+
+            <div class="pelicula">
+
+                <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600">
+
+                <div>
+
+                    <h3>Spider-Man</h3>
+
+                    <p>
+                        Una de las historias más populares
+                        de Marvel, protagonizada por Peter Parker.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="pelicula">
+
+                <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=600">
+
+                <div>
+
+                    <h3>Avengers</h3>
+
+                    <p>
+                        Los héroes más importantes de Marvel
+                        se unen para enfrentar grandes amenazas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="pelicula">
+
+                <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600">
+
+                <div>
+
+                    <h3>Iron Man</h3>
+
+                    <p>
+                        Tony Stark utiliza su inteligencia y
+                        tecnología para convertirse en Iron Man.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="pelicula">
+
+                <img src="https://images.unsplash.com/photo-1636572481914-a07f6e4d7f3c?w=600">
+
+                <div>
+
+                    <h3>Black Panther</h3>
+
+                    <p>
+                        T'Challa protege Wakanda y lucha
+                        para defender su reino.
+                    </p>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         INTRODUCCIÓN
-    ========================== -->
+    <!-- PERSONAJES -->
 
-    <section class="introduccion">
+    <section id="personajes" class="informacion">
 
-        <div class="titulo-seccion">
+        <h2 class="titulo">
+            Héroes de <span>Marvel</span>
+        </h2>
 
-            <p>MARVEL CINEMATIC UNIVERSE</p>
-
-            <h2>
-                Una historia que hizo
-                <span>historia</span>
-            </h2>
-
-        </div>
-
-        <p class="texto-intro">
-
-            El Universo Cinematográfico de Marvel es una de las
-            franquicias cinematográficas más conocidas del mundo.
-            A través de los años, sus películas han presentado
-            personajes como Iron Man, Capitán América, Thor,
-            Spider-Man, Black Panther y muchos más.
-
+        <p>
+            El Universo Marvel cuenta con una gran cantidad
+            de personajes como Spider-Man, Iron Man, Thor,
+            Captain America, Hulk, Black Panther y muchos más.
         </p>
 
     </section>
 
 
-    <!-- =========================
-         ESTADÍSTICAS
-    ========================== -->
-
-    <section class="estadisticas">
-
-        <div class="estadistica">
-
-            <h3>$2.79B</h3>
-
-            <p>
-                Recaudación mundial aproximada de
-                Avengers: Endgame
-            </p>
-
-        </div>
-
-
-        <div class="estadistica">
-
-            <h3>$400M</h3>
-
-            <p>
-                Presupuesto reportado para
-                Avengers: Endgame
-            </p>
-
-        </div>
-
-
-        <div class="estadistica">
-
-            <h3>2019</h3>
-
-            <p>
-                Año en que se estrenó
-                Avengers: Endgame
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PELÍCULAS MÁS TAQUILLERAS
-    ========================== -->
-
-    <section class="peliculas" id="taquilleras">
-
-        <div class="titulo-seccion">
-
-            <p>BOX OFFICE</p>
-
-            <h2>
-                Películas más
-                <span>taquilleras</span>
-            </h2>
-
-        </div>
-
-
-        <div class="grid-peliculas">
-
-
-            <!-- =====================
-                 PELÍCULA 1
-            ====================== -->
-
-            <article class="pelicula">
-
-                <div class="imagen-pelicula">
-
-                    <img
-                        src="imagenes/endgame.jpg"
-                        alt="Póster de Avengers Endgame"
-                    >
-
-                    <div class="numero">
-                        #1
-                    </div>
-
-                </div>
-
-
-                <div class="informacion">
-
-                    <h3>
-                        Avengers: Endgame
-                    </h3>
-
-                    <p class="año">
-                        2019
-                    </p>
-
-                    <div class="datos-pelicula">
-
-                        <p>
-                            <strong>Taquilla</strong>
-                            <span>$2.79 B</span>
-                        </p>
-
-                        <p>
-                            <strong>Presupuesto</strong>
-                            <span>$356–400 M</span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =====================
-                 PELÍCULA 2
-            ====================== -->
-
-            <article class="pelicula">
-
-                <div class="imagen-pelicula">
-
-                    <img
-                        src="imagenes/infinity-war.jpg"
-                        alt="Póster de Avengers Infinity War"
-                    >
-
-                    <div class="numero">
-                        #2
-                    </div>
-
-                </div>
-
-
-                <div class="informacion">
-
-                    <h3>
-                        Avengers: Infinity War
-                    </h3>
-
-                    <p class="año">
-                        2018
-                    </p>
-
-                    <div class="datos-pelicula">
-
-                        <p>
-                            <strong>Taquilla</strong>
-                            <span>$2.05 B</span>
-                        </p>
-
-                        <p>
-                            <strong>Presupuesto</strong>
-                            <span>$300–350 M</span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =====================
-                 PELÍCULA 3
-            ====================== -->
-
-            <article class="pelicula">
-
-                <div class="imagen-pelicula">
-
-                    <img
-                        src="imagenes/no-way-home.jpg"
-                        alt="Póster de Spider-Man No Way Home"
-                    >
-
-                    <div class="numero">
-                        #3
-                    </div>
-
-                </div>
-
-
-                <div class="informacion">
-
-                    <h3>
-                        Spider-Man: No Way Home
-                    </h3>
-
-                    <p class="año">
-                        2021
-                    </p>
-
-                    <div class="datos-pelicula">
-
-                        <p>
-                            <strong>Taquilla</strong>
-                            <span>$1.92 B</span>
-                        </p>
-
-                        <p>
-                            <strong>Presupuesto</strong>
-                            <span>$200 M</span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =====================
-                 PELÍCULA 4
-            ====================== -->
-
-            <article class="pelicula">
-
-                <div class="imagen-pelicula">
-
-                    <img
-                        src="imagenes/avengers.jpg"
-                        alt="Póster de The Avengers"
-                    >
-
-                    <div class="numero">
-                        #4
-                    </div>
-
-                </div>
-
-
-                <div class="informacion">
-
-                    <h3>
-                        The Avengers
-                    </h3>
-
-                    <p class="año">
-                        2012
-                    </p>
-
-                    <div class="datos-pelicula">
-
-                        <p>
-                            <strong>Taquilla</strong>
-                            <span>$1.52 B</span>
-                        </p>
-
-                        <p>
-                            <strong>Presupuesto</strong>
-                            <span>$220 M</span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =====================
-                 PELÍCULA 5
-            ====================== -->
-
-            <article class="pelicula">
-
-                <div class="imagen-pelicula">
-
-                    <img
-                        src="imagenes/black-panther.jpg"
-                        alt="Póster de Black Panther"
-                    >
-
-                    <div class="numero">
-                        #5
-                    </div>
-
-                </div>
-
-
-                <div class="informacion">
-
-                    <h3>
-                        Black Panther
-                    </h3>
-
-                    <p class="año">
-                        2018
-                    </p>
-
-                    <div class="datos-pelicula">
-
-                        <p>
-                            <strong>Taquilla</strong>
-                            <span>$1.35 B</span>
-                        </p>
-
-                        <p>
-                            <strong>Presupuesto</strong>
-                            <span>$200 M</span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- =====================
-                 PELÍCULA 6
-            ====================== -->
-
-            <article class="pelicula">
-
-                <div class="imagen-pelicula">
-
-                    <img
-                        src="imagenes/ultron.jpg"
-                        alt="Póster de Avengers Age of Ultron"
-                    >
-
-                    <div class="numero">
-                        #6
-                    </div>
-
-                </div>
-
-
-                <div class="informacion">
-
-                    <h3>
-                        Avengers: Age of Ultron
-                    </h3>
-
-                    <p class="año">
-                        2015
-                    </p>
-
-                    <div class="datos-pelicula">
-
-                        <p>
-                            <strong>Taquilla</strong>
-                            <span>$1.40 B</span>
-                        </p>
-
-                        <p>
-                            <strong>Presupuesto</strong>
-                            <span>$365 M</span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         MAYORES PRESUPUESTOS
-    ========================== -->
-
-    <section class="presupuestos" id="presupuestos">
-
-        <div class="titulo-seccion">
-
-            <p>PRODUCCIÓN</p>
-
-            <h2>
-                Mayores
-                <span>presupuestos</span>
-            </h2>
-
-        </div>
-
-
-        <div class="tabla-container">
-
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <th>
-                            Película
-                        </th>
-
-                        <th>
-                            Año
-                        </th>
-
-                        <th>
-                            Presupuesto
-                        </th>
-
-                        <th>
-                            Recaudación
-                        </th>
-
-                    </tr>
-
-                </thead>
-
-
-                <tbody>
-
-                    <tr>
-
-                        <td>
-                            Avengers: Endgame
-                        </td>
-
-                        <td>
-                            2019
-                        </td>
-
-                        <td>
-                            $356–400 M
-                        </td>
-
-                        <td>
-                            $2.79 B
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Avengers: Age of Ultron
-                        </td>
-
-                        <td>
-                            2015
-                        </td>
-
-                        <td>
-                            $365 M
-                        </td>
-
-                        <td>
-                            $1.40 B
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Avengers: Infinity War
-                        </td>
-
-                        <td>
-                            2018
-                        </td>
-
-                        <td>
-                            $300–350 M
-                        </td>
-
-                        <td>
-                            $2.05 B
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Captain America: Civil War
-                        </td>
-
-                        <td>
-                            2016
-                        </td>
-
-                        <td>
-                            $250 M
-                        </td>
-
-                        <td>
-                            $1.15 B
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Doctor Strange: Multiverse of Madness
-                        </td>
-
-                        <td>
-                            2022
-                        </td>
-
-                        <td>
-                            $200 M
-                        </td>
-
-                        <td>
-                            $955 M
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         COMPARACIÓN
-    ========================== -->
-
-    <section class="comparacion" id="datos">
-
-        <div class="titulo-seccion">
-
-            <p>BOX OFFICE</p>
-
-            <h2>
-                Comparación de
-                <span>taquilla</span>
-            </h2>
-
-        </div>
-
-
-        <div class="grafico">
-
-
-            <!-- ENDGAME -->
-
-            <div class="barra">
-
-                <div class="barra-texto">
-
-                    <span>
-                        Avengers: Endgame
-                    </span>
-
-                    <b>
-                        $2.79 B
-                    </b>
-
-                </div>
-
-                <div class="barra-fondo">
-
-                    <div class="barra-relleno endgame"></div>
-
-                </div>
-
-            </div>
-
-
-            <!-- INFINITY WAR -->
-
-            <div class="barra">
-
-                <div class="barra-texto">
-
-                    <span>
-                        Avengers: Infinity War
-                    </span>
-
-                    <b>
-                        $2.05 B
-                    </b>
-
-                </div>
-
-                <div class="barra-fondo">
-
-                    <div class="barra-relleno infinity"></div>
-
-                </div>
-
-            </div>
-
-
-            <!-- NO WAY HOME -->
-
-            <div class="barra">
-
-                <div class="barra-texto">
-
-                    <span>
-                        Spider-Man: No Way Home
-                    </span>
-
-                    <b>
-                        $1.92 B
-                    </b>
-
-                </div>
-
-                <div class="barra-fondo">
-
-                    <div class="barra-relleno spiderman"></div>
-
-                </div>
-
-            </div>
-
-
-            <!-- THE AVENGERS -->
-
-            <div class="barra">
-
-                <div class="barra-texto">
-
-                    <span>
-                        The Avengers
-                    </span>
-
-                    <b>
-                        $1.52 B
-                    </b>
-
-                </div>
-
-                <div class="barra-fondo">
-
-                    <div class="barra-relleno avengers"></div>
-
-                </div>
-
-            </div>
-
-
-            <!-- BLACK PANTHER -->
-
-            <div class="barra">
-
-                <div class="barra-texto">
-
-                    <span>
-                        Black Panther
-                    </span>
-
-                    <b>
-                        $1.35 B
-                    </b>
-
-                </div>
-
-                <div class="barra-fondo">
-
-                    <div class="barra-relleno black"></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         INFORMACIÓN FINAL
-    ========================== -->
-
-    <section class="introduccion">
-
-        <div class="titulo-seccion">
-
-            <p>MARVEL STUDIOS</p>
-
-            <h2>
-                El poder de los
-                <span>superhéroes</span>
-            </h2>
-
-        </div>
-
-        <p class="texto-intro">
-
-            Desde Iron Man hasta los Avengers, Marvel ha construido
-            un universo cinematográfico conectado que reúne a
-            diferentes personajes e historias.
-
+    <!-- INFORMACIÓN -->
+
+    <section id="informacion">
+
+        <h2 class="titulo">
+            Sobre <span>Marvel</span>
+        </h2>
+
+        <p>
+            Marvel Studios es conocido por crear películas
+            de superhéroes conectadas dentro de un mismo
+            universo cinematográfico.
+        </p>
+
+        <p>
+            Sus películas combinan acción, aventura,
+            ciencia ficción y humor.
         </p>
 
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
-        <div class="footer-logo">
-            MARVEL
-        </div>
-
         <p>
-            Página web educativa sobre Marvel Studios.
-        </p>
-
-        <p>
-            Proyecto escolar
-        </p>
-
-        <p class="copyright">
-            © 2026 Marvel Fan Page
+            © 2026 Página educativa sobre Marvel
         </p>
 
     </footer>
-
 
 </body>
 
 </html>
 ```
-
-    color: #e62429;
-
-    font-weight: bold;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 20px;
-}
-
-
-.hero h1 {
-    font-size: clamp(50px, 8vw, 100px);
-
-    line-height: .9;
-
-    text-transform: uppercase;
-
-    font-weight: 900;
-
-    margin-bottom: 30px;
-}
-
-
-.hero h1 span {
-    color: #e62429;
-
-    display: block;
-}
-
-
-.descripcion {
-    max-width: 600px;
-
-    color: #cccccc;
-
-    font-size: 19px;
-
-    line-height: 1.7;
-
-    margin-bottom: 35px;
-}
-
-
-/* =====================================
-   BOTÓN
-===================================== */
-
-.boton {
-    display: inline-block;
-
-    padding: 16px 30px;
-
-    background: #e62429;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    border-radius: 4px;
-
-    transition: .3s;
-}
-
-
-.boton:hover {
-    background: white;
-
-    color: #e62429;
-
-    transform: translateY(-4px);
-}
-
-
-/* =====================================
-   SECCIONES
-===================================== */
-
-section {
-    padding: 100px 8%;
-}
-
-
-.titulo-seccion {
-    text-align: center;
-
-    margin-bottom: 55px;
-}
-
-
-.titulo-seccion > p {
-    color: #e62429;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 12px;
-}
-
-
-.titulo-seccion h2 {
-    font-size: clamp(32px, 5vw, 50px);
-
-    text-transform: uppercase;
-}
-
-
-.titulo-seccion span {
-    color: #e62429;
-}
-
-
-/* =====================================
-   INTRODUCCIÓN
-===================================== */
-
-.introduccion {
-    background: #0d0d0d;
-
-    text-align: center;
-}
-
-
-.texto-intro {
-    max-width: 850px;
-
-    margin: auto;
-
-    color: #aaa;
-
-    line-height: 1.8;
-
-    font-size: 18px;
-}
-
-
-/* =====================================
-   ESTADÍSTICAS
-===================================== */
-
-.estadisticas {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-    background: #0d0d0d;
-
-    padding-top: 0;
-}
-
-
-.estadistica {
-    background: #151515;
-
-    padding: 40px 25px;
-
-    text-align: center;
-
-    border: 1px solid #292929;
-
-    border-radius: 8px;
-
-    transition: .3s;
-}
-
-
-.estadistica:hover {
-    border-color: #e62429;
-
-    transform: translateY(-5px);
-}
-
-
-.estadistica h3 {
-    color: #e62429;
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-
-.estadistica p {
-    color: #aaa;
-
-    line-height: 1.5;
-}
-
-
-/* =====================================
-   PELÍCULAS
-===================================== */
-
-.peliculas {
-    background: #080808;
-}
-
-
-.grid-peliculas {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 30px;
-}
-
-
-.pelicula {
-    background: #141414;
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-    border: 1px solid #292929;
-
-    transition: .35s;
-}
-
-
-.pelicula:hover {
-    transform: translateY(-10px);
-
-    border-color: #e62429;
-
-    box-shadow: 0 20px 50px rgba(230, 36, 41, .2);
-}
-
-
-.imagen-pelicula {
-    height: 420px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background: #222;
-}
-
-
-.imagen-pelicula img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: .5s;
-}
-
-
-.pelicula:hover .imagen-pelicula img {
-    transform: scale(1.07);
-}
-
-
-.imagen-pelicula::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            transparent 55%,
-            rgba(0, 0, 0, .8)
-        );
-}
-
-
-.numero {
-    position: absolute;
-
-    top: 15px;
-    left: 15px;
-
-    z-index: 2;
-
-    background: #e62429;
-
-    padding: 9px 14px;
-
-    font-weight: bold;
-
-    border-radius: 4px;
-}
-
-
-.informacion {
-    padding: 25px;
-}
-
-
-.informacion h3 {
-    font-size: 22px;
-
-    margin-bottom: 7px;
-}
-
-
-.año {
-    color: #888;
-
-    margin-bottom: 20px;
-}
-
-
-.datos-pelicula {
-    border-top: 1px solid #292929;
-
-    padding-top: 15px;
-}
-
-
-.datos-pelicula p {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    color: #aaa;
-
-    font-size: 14px;
-
-    margin: 8px 0;
-}
-
-
-.datos-pelicula strong {
-    color: white;
-}
-
-
-/* =====================================
-   TABLA
-===================================== */
-
-.presupuestos {
-    background: #101010;
-}
-
-
-.tabla-container {
-    overflow-x: auto;
-}
-
-
-table {
-    width: 100%;
-
-    min-width: 700px;
-
-    border-collapse: collapse;
-
-    background: #151515;
-}
-
-
-th {
-    background: #e62429;
-
-    padding: 18px;
-
-    text-align: left;
-
-    font-size: 14px;
-}
-
-
-td {
-    padding: 20px 18px;
-
-    border-bottom: 1px solid #292929;
-
-    color: #ccc;
-}
-
-
-tbody tr {
-    transition: .2s;
-}
-
-
-tbody tr:hover {
-    background: #202020;
-}
-
-
-td:last-child {
-    color: #55dc72;
-
-    font-weight: bold;
-}
-
-
-/* =====================================
-   GRÁFICO
-===================================== */
-
-.comparacion {
-    background: #080808;
-}
-
-
-.grafico {
-    max-width: 950px;
-
-    margin: auto;
-}
-
-
-.barra {
-    margin-bottom: 30px;
-}
-
-
-.barra-texto {
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-bottom: 10px;
-
-    color: #ddd;
-}
-
-
-.barra-texto b {
-    color: #e62429;
-}
-
-
-.barra-fondo {
-    width: 100%;
-
-    height: 15px;
-
-    background: #252525;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-
-.barra-relleno {
-    height: 100%;
-
-    background: #e62429;
-
-    border-radius: 20px;
-}
-
-
-.endgame {
-    width: 100%;
-}
-
-
-.infinity {
-    width: 74%;
-}
-
-
-.spiderman {
-    width: 69%;
-}
-
-
-.avengers {
-    width: 54%;
-}
-
-
-.black {
-    width: 48%;
-}
-
-
-/* =====================================
-   FOOTER
-===================================== */
-
-footer {
-    padding: 60px 20px;
-
-    text-align: center;
-
-    background: #050505;
-
-    border-top: 2px solid #e62429;
-}
-
-
-.footer-logo {
-    display: inline-block;
-
-    background: #e62429;
-
-    padding: 7px 15px;
-
-    font-size: 30px;
-
-    font-weight: 900;
-
-    margin-bottom: 20px;
-}
-
-
-footer p {
-    color: #777;
-
-    margin: 7px;
-}
-
-
-.copyright {
-    font-size: 13px;
-}
-
-
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-@media (max-width: 900px) {
-
-    .header {
-        padding: 0 5%;
-    }
-
-
-    .header nav {
-        gap: 15px;
-    }
-
-
-    .grid-peliculas {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    .estadisticas {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .header {
-        height: 65px;
-    }
-
-
-    .header nav {
-        display: none;
-    }
-
-
-    .hero {
-        min-height: 600px;
-
-        padding: 60px 6%;
-    }
-
-
-    section {
-        padding: 70px 6%;
-    }
-
-
-    .grid-peliculas {
-        grid-template-columns: 1fr;
-    }
-
-
-    .imagen-pelicula {
-        height: 500px;
-```css
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #080808;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* =========================================
-   MENÚ
-========================================= */
-
-.header {
-    width: 100%;
-    height: 75px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 8%;
-
-    background-color: #050505;
-
-    border-bottom: 2px solid #e62429;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 1000;
-}
-
-
-/* LOGO */
-
-.logo img {
-    width: 120px;
-    height: auto;
-    display: block;
-}
-
-
-/* LINKS */
-
-.header nav {
-    display: flex;
-    gap: 35px;
-}
-
-.header nav a {
-    color: white;
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.header nav a:hover {
-    color: #e62429;
-}
-
-
-/* =========================================
-   PORTADA PRINCIPAL
-========================================= */
-
-.hero {
-    min-height: 700px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 80px 8%;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            #050505 10%,
-            rgba(5, 5, 5, 0.90) 40%,
-            rgba(5, 5, 5, 0.35) 100%
-        ),
-        radial-gradient(
-            circle at 80% 50%,
-            #a50000,
-            #080808 60%
-        );
-}
-
-
-/* EFECTO ROJO */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    right: 5%;
-
-    border-radius: 50%;
-
-    background: rgba(230, 36, 41, 0.15);
-
-    filter: blur(90px);
-}
-
-
-/* CONTENIDO */
-
-.hero-contenido {
-    max-width: 700px;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* TEXTO PEQUEÑO */
-
-.subtitulo {
-    color: #e62429;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 20px;
-}
-
-
-/* TÍTULO */
-
-.hero h1 {
-    font-size: clamp(50px, 8vw, 100px);
-
-    line-height: 0.9;
-
-    text-transform: uppercase;
-
-    font-weight: 900;
-
-    margin-bottom: 30px;
-}
-
-.hero h1 span {
-    color: #e62429;
-
-    display: block;
-}
-
-
-/* DESCRIPCIÓN */
-
-.descripcion {
-    max-width: 600px;
-
-    color: #cccccc;
-
-    font-size: 19px;
-
-    line-height: 1.7;
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================================
-   BOTÓN
-========================================= */
-
-.boton {
-    display: inline-block;
-
-    padding: 16px 30px;
-
-    background-color: #e62429;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    font-weight: bold;
-
-    border-radius: 4px;
-
-    transition: 0.3s;
-}
-
-.boton:hover {
-    background-color: white;
-
-    color: #e62429;
-
-    transform: translateY(-4px);
-}
-
-
-/* =========================================
-   SECCIONES
-========================================= */
-
-section {
-    padding: 100px 8%;
-}
-
-
-/* TÍTULOS */
-
-.titulo-seccion {
-    text-align: center;
-
-    margin-bottom: 55px;
-}
-
-.titulo-seccion > p {
-    color: #e62429;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 12px;
-}
-
-.titulo-seccion h2 {
-    font-size: clamp(32px, 5vw, 50px);
-
-    text-transform: uppercase;
-
-    line-height: 1.1;
-}
-
-.titulo-seccion span {
-    color: #e62429;
-}
-
-
-/* =========================================
-   INTRODUCCIÓN
-========================================= */
-
-.introduccion {
-    background-color: #0d0d0d;
-
-    text-align: center;
-}
-
-.texto-intro {
-    max-width: 850px;
-
-    margin: auto;
-
-    color: #aaa;
-
-    line-height: 1.8;
-
-    font-size: 18px;
-}
-
-
-/* =========================================
-   ESTADÍSTICAS
-========================================= */
-
-.estadisticas {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-    background-color: #0d0d0d;
-
-    padding-top: 0;
-}
-
-
-/* TARJETA */
-
-.estadistica {
-    background-color: #151515;
-
-    padding: 40px 25px;
-
-    text-align: center;
-
-    border: 1px solid #292929;
-
-    border-radius: 8px;
-
-    transition: 0.3s;
-}
-
-.estadistica:hover {
-    border-color: #e62429;
-
-    transform: translateY(-6px);
-
-    box-shadow: 0 10px 30px rgba(230, 36, 41, 0.15);
-}
-
-
-/* NÚMERO */
-
-.estadistica h3 {
-    color: #e62429;
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-
-/* TEXTO */
-
-.estadistica p {
-    color: #aaa;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================
-   PELÍCULAS
-========================================= */
-
-.peliculas {
-    background-color: #080808;
-}
-
-
-/* GRID */
-
-.grid-peliculas {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 30px;
-}
-
-
-/* TARJETA DE PELÍCULA */
-
-.pelicula {
-    background-color: #141414;
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-    border: 1px solid #292929;
-
-    transition: 0.35s;
-}
-
-
-/* EFECTO AL PASAR EL MOUSE */
-
-.pelicula:hover {
-    transform: translateY(-10px);
-
-    border-color: #e62429;
-
-    box-shadow:
-        0 20px 50px rgba(230, 36, 41, 0.20);
-}
-
-
-/* =========================================
-   IMAGEN DE LA PELÍCULA
-========================================= */
-
-.imagen-pelicula {
-    height: 420px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background-color: #222;
-}
-
-
-.imagen-pelicula img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: 0.5s;
-}
-
-
-/* ZOOM */
-
-.pelicula:hover .imagen-pelicula img {
-    transform: scale(1.07);
-}
-
-
-/* OSCURECER PARTE INFERIOR */
-
-.imagen-pelicula::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            transparent 50%,
-            rgba(0, 0, 0, 0.85)
-        );
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   NÚMERO DEL RANKING
-========================================= */
-
-.numero {
-    position: absolute;
-
-    top: 15px;
-    left: 15px;
-
-    z-index: 5;
-
-    background-color: #e62429;
-
-    padding: 9px 14px;
-
-    font-weight: bold;
-
-    border-radius: 4px;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   INFORMACIÓN DE PELÍCULA
-========================================= */
-
-.informacion {
-    padding: 25px;
-}
-
-
-.informacion h3 {
-    font-size: 22px;
-
-    margin-bottom: 7px;
-
-    line-height: 1.3;
-}
-
-
-.año {
-    color: #888;
-
-    margin-bottom: 20px;
-}
-
-
-/* DATOS */
-
-.datos-pelicula {
-    border-top: 1px solid #292929;
-
-    padding-top: 15px;
-}
-
-
-.datos-pelicula p {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    color: #aaa;
-
-    font-size: 14px;
-
-    margin: 9px 0;
-}
-
-
-.datos-pelicula strong {
-    color: white;
-}
-
-
-/* =========================================
-   TABLA DE PRESUPUESTOS
-========================================= */
-
-.presupuestos {
-    background-color: #101010;
-}
-
-
-.tabla-container {
-    width: 100%;
-
-    overflow-x: auto;
-}
-
-
-table {
-    width: 100%;
-
-    min-width: 700px;
-
-    border-collapse: collapse;
-
-    background-color: #151515;
-}
-
-
-/* ENCABEZADO */
-
-th {
-    background-color: #e62429;
-
-    color: white;
-
-    padding: 18px;
-
-    text-align: left;
-
-    font-size: 14px;
-}
-
-
-/* CELDAS */
-
-td {
-    padding: 20px 18px;
-
-    border-bottom: 1px solid #292929;
-
-    color: #ccc;
-}
-
-
-/* HOVER */
-
-tbody tr {
-    transition: 0.2s;
-}
-
-tbody tr:hover {
-    background-color: #202020;
-}
-
-
-/* RECAUDACIÓN */
-
-td:last-child {
-    color: #55dc72;
-
-    font-weight: bold;
-}
-
-
-/* =========================================
-   GRÁFICO
-========================================= */
-
-.comparacion {
-    background-color: #080808;
-}
-
-
-.grafico {
-    max-width: 950px;
-
-    margin: auto;
-}
-
-
-.barra {
-    margin-bottom: 30px;
-}
-
-
-/* NOMBRE + DINERO */
-
-.barra-texto {
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-bottom: 10px;
-
-    color: #ddd;
-
-    font-size: 15px;
-}
-
-
-.barra-texto b {
-    color: #e62429;
-}
-
-
-/* FONDO */
-
-.barra-fondo {
-    width: 100%;
-
-    height: 15px;
-
-    background-color: #252525;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-
-/* BARRA ROJA */
-
-.barra-relleno {
-    height: 100%;
-
-    background-color: #e62429;
-
-    border-radius: 20px;
-
-    transition: width 1s ease;
-}
-
-
-/* PORCENTAJES */
-
-.endgame {
-    width: 100%;
-}
-
-.infinity {
-    width: 74%;
-}
-
-.spiderman {
-    width: 69%;
-}
-
-.avengers {
-    width: 54%;
-}
-
-.black {
-    width: 48%;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    padding: 60px 20px;
-
-    text-align: center;
-
-    background-color: #050505;
-
-    border-top: 2px solid #e62429;
-}
-
-
-/* LOGO FOOTER */
-
-.footer-logo {
-    display: inline-block;
-
-    background-color: #e62429;
-
-    color: white;
-
-    padding: 7px 15px;
-
-    font-size: 30px;
-
-    font-weight: 900;
-
-    margin-bottom: 20px;
-}
-
-
-footer p {
-    color: #777;
-
-    margin: 7px;
-}
-
-
-.copyright {
-    font-size: 13px;
-}
-
-
-/* =========================================
-   ANIMACIONES
-========================================= */
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-.hero-contenido {
-    animation: aparecer 1s ease;
-}
-
-
-/* =========================================
-   TABLETS
-========================================= */
-
-@media (max-width: 900px) {
-
-    .header {
-        padding: 0 5%;
-    }
-
-
-    .header nav {
-        gap: 18px;
-    }
-
-
-    .grid-peliculas {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    .estadisticas {
-        grid-template-columns: 1fr;
-    }
-
-
-    .hero {
-        min-height: 600px;
-    }
-
-}
-
-
-/* =========================================
-   CELULARES
-========================================= */
-
-@media (max-width: 600px) {
-
-    .header {
-        height: 65px;
-
-        padding: 0 5%;
-    }
-
-
-    .logo img {
-        width: 100px;
-    }
-
-
-    .header nav {
-        display: none;
-    }
-
-
-    .hero {
-        min-height: 600px;
-
-        padding: 60px 6%;
-    }
-
-
-    .hero h1 {
-        font-size: 50px;
-    }
-
-
-    .descripcion {
-        font-size: 16px;
-    }
-
-
-    section {
-        padding: 70px 6%;
-    }
-
-
-    .grid-peliculas {
-        grid-template-columns: 1fr;
-    }
-
-
-    .imagen-pelicula {
-        height: 500px;
-    }
-
-
-    .estadisticas {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-
-    .barra-texto {
-        font-size: 13px;
-    }
-
-
-    .tabla-container {
-        margin-top: 20px;
-    }
-
-
-
-
